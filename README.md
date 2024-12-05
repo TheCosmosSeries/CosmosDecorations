@@ -39,6 +39,6 @@ This repo does not have a licence. This means that by default, it is All Rights 
 - Cosmos Decorations on [Modrinth](https://modrinth.com/mod/cosmos-decorations)
 
 ## The Cosmos Series
-This mod is part of [The Cosmos Series](https://www.github.com/TheCosmosSeries)
+This mod is part of [The Cosmos Series](https://www.github.com/TheCosmosSeries).
 
 | 2024 @ TheCosmicNebula | TheCosmosSeries | All Rights Reserved (Except Where Specified) |
