@@ -2,13 +2,16 @@
 
 ![cosmos-decorations-title-new-1](https://github.com/user-attachments/assets/ad412e14-c17a-4f9f-a3a1-df2961b3bf66)
 
-# Cosmos Decorations
+# **Cosmos Decorations**
 A lightweight mod which adds various decorative blocks.
+
+### **Description**
+Cosmos Decorations is a lightweight mod which adds various decorative blocks, such as stairs and slabs for Vanilla Blocks, stone variants for various Vanilla Blocks and more.
 
 ## Licence
 This repo does not have a licence. This means that by default, it is All Rights Reserved. However, due to having complete control over what rights that includes, here is a list of what you can and cannot do:
 
-## You can:
+### You can:
  - Modify the code for your own personal private use, so long as the modified code is significantly dissimilar from the original code.
  - Use the pull request feature.
  - Create a Fork of this repository if you satisfy the following conditions:
@@ -26,7 +29,7 @@ This repo does not have a licence. This means that by default, it is All Rights 
    - You do not re-route the link through comission sites such as Ad.Fly.
 - Copy any classes that have the #OPEN tag in the comment after the Imports.
 
-## You Cannot:
+### You Cannot:
  - Copy large chunks of code, entire Class files or any assets contained within the Mod.
  - Redistribute the Mod, unless the link you provide is the original. (CurseForge or GitHub)
  - Redistribute the Mod under a different name or Author.
