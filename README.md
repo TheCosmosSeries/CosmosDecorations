@@ -2,10 +2,10 @@
 
 ![cosmos-decorations-title-new-1](https://github.com/user-attachments/assets/ad412e14-c17a-4f9f-a3a1-df2961b3bf66)
 
-# **Cosmos Decorations**
+# Cosmos Decorations
 A lightweight mod which adds various decorative blocks.
 
-### **Description**
+### Description
 Cosmos Decorations is a lightweight mod which adds various decorative blocks, such as stairs and slabs for Vanilla Blocks, stone variants for various Vanilla Blocks and more.
 
 ## Licence
@@ -35,8 +35,10 @@ This repo does not have a licence. This means that by default, it is All Rights 
  - Redistribute the Mod under a different name or Author.
 
 ## Mod Pages
-Cosmos Decorations on [CurseForge](https://minecraft.curseforge.com/projects/cosmos-decorations)
+- Cosmos Decorations on [CurseForge](https://minecraft.curseforge.com/projects/cosmos-decorations)
+- Cosmos Decorations on [Modrinth](https://modrinth.com/mod/cosmos-decorations)
 
-Cosmos Decorations on [Modrinth](https://modrinth.com/mod/cosmos-decorations)
+## The Cosmos Series
+This mod is part of [The Cosmos Series](https://www.github.com/TheCosmosSeries)
 
 | 2024 @ TheCosmicNebula | TheCosmosSeries | All Rights Reserved (Except Where Specified) |
