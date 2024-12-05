@@ -1,6 +1,6 @@
 ![Version](https://img.shields.io/badge/VERSION-1.20.1-success?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/TheCosmosSeries/CosmosDecorations?label=REPO%20SIZE&style=for-the-badge) ![Open Issues](https://img.shields.io/github/issues/TheCosmosSeries/CosmosDecorations?style=for-the-badge) ![Closed Issues](https://img.shields.io/github/issues-closed/TheCosmosSeries/CosmosDecorations?color=green&style=for-the-badge)
 
-![cosmos-decorations-title-new-1](https://github.com/user-attachments/assets/0afffeed-75a6-4b82-859f-311302d9a06b)
+![cosmos-decorations-title-new-1](https://github.com/user-attachments/assets/ad412e14-c17a-4f9f-a3a1-df2961b3bf66)
 
 # Cosmos Decorations
 A lightweight mod which adds various decorative blocks.
