@@ -1,0 +1,20 @@
+{
+	"itemGroup.cosmosdecorations": "Cosmos Decorations",
+
+	"block.cosmosdecorations.block_player_glass_white": "White Player Glass",
+	"block.cosmosdecorations.block_player_glass_orange": "Orange Player Glass",
+	"block.cosmosdecorations.block_player_glass_magenta": "Magenta Player Glass",
+	"block.cosmosdecorations.block_player_glass_light_blue": "Light Blue Player Glass",
+	"block.cosmosdecorations.block_player_glass_yellow": "Yellow Player Glass",
+	"block.cosmosdecorations.block_player_glass_lime": "Lime Player Glass",
+	"block.cosmosdecorations.block_player_glass_pink": "Pink Player Glass",
+	"block.cosmosdecorations.block_player_glass_gray": "Grey Player Glass",
+	"block.cosmosdecorations.block_player_glass_light_gray": "Light Grey Player Glass",
+	"block.cosmosdecorations.block_player_glass_cyan": "Cyan Player Glass",
+	"block.cosmosdecorations.block_player_glass_purple": "Purple Player Glass",
+	"block.cosmosdecorations.block_player_glass_blue": "Blue Player Glass",
+	"block.cosmosdecorations.block_player_glass_brown": "Brown Player Glass",
+	"block.cosmosdecorations.block_player_glass_green": "Green Player Glass",
+	"block.cosmosdecorations.block_player_glass_red": "Red Player Glass",
+	"block.cosmosdecorations.block_player_glass_black": "Black Player Glass"
+}
