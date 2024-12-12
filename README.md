@@ -1,9 +1,11 @@
-![Version](https://img.shields.io/badge/VERSION-1.20.1-success?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/TheCosmosSeries/CosmosDecorations?label=REPO%20SIZE&style=for-the-badge) ![Open Issues](https://img.shields.io/github/issues/TheCosmosSeries/CosmosDecorations?style=for-the-badge) ![Closed Issues](https://img.shields.io/github/issues-closed/TheCosmosSeries/CosmosDecorations?color=green&style=for-the-badge)
+![Version](https://img.shields.io/badge/VERSION-1.21.1-3eff8e?style=for-the-badge) ![Version](https://img.shields.io/badge/Loader-NeoForge-ffa835?style=for-the-badge) ![Repo Size](https://img.shields.io/github/repo-size/TheCosmosSeries/CosmosDecorations?label=REPO%20SIZE&style=for-the-badge) ![Open Issues](https://img.shields.io/github/issues/TheCosmosSeries/CosmosDecorations?style=for-the-badge) ![Closed Issues](https://img.shields.io/github/issues-closed/TheCosmosSeries/CosmosDecorations?color=green&style=for-the-badge)
 
 ![cosmos-decorations-title-new-1](https://github.com/user-attachments/assets/ad412e14-c17a-4f9f-a3a1-df2961b3bf66)
 
 # Cosmos Decorations
 A lightweight mod which adds various decorative blocks.
+
+Currently supporting **1.21.1** and **NeoForge**.
 
 ### Description
 Cosmos Decorations is a lightweight mod which adds various decorative blocks, such as stairs and slabs for Vanilla Blocks, stone variants for various Vanilla Blocks and more.
