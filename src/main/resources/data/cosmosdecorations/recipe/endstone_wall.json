@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"EEE",
+		"EEE"
+	],
+	"key": {
+		"E": {
+			"item": "minecraft:end_stone"
+		}
+	},
+	"result": {
+		"id": "cosmosdecorations:block_endstone_wall",
+		"count": 6
+	}
+}

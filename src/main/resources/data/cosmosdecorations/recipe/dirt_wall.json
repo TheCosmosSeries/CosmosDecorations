@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"EEE",
+		"EEE"
+	],
+	"key": {
+		"E": {
+			"item": "minecraft:dirt"
+		}
+	},
+	"result": {
+		"id": "cosmosdecorations:block_dirt_wall",
+		"count": 6
+	}
+}

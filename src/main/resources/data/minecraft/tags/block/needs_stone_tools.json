@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"cosmosdecorations:block_netherrack_stairs",
+		"cosmosdecorations:block_netherrack_slab",
+		"cosmosdecorations:block_netherrack_wall"
+	]
+}

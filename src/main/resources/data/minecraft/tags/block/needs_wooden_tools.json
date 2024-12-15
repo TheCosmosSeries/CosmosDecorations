@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values": [
+		"cosmosdecorations:block_dirt_stairs",
+		"cosmosdecorations:block_dirt_slab",
+		"cosmosdecorations:block_dirt_wall",
+		
+		"cosmosdecorations:block_stone_wall"
+	]
+}

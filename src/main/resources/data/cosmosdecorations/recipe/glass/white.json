@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"GGG",
+		"GPG",
+		"GGG"
+	],
+	"key": {
+		"G": {
+			"item": "minecraft:glass"
+		},
+		"P":{
+            "item": "minecraft:phantom_membrane"
+        }
+	},
+	"result": {
+		"id": "cosmosdecorations:block_player_glass_white",
+		"count": 8
+	}
+}

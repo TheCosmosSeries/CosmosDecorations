@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"cosmosdecorations:block_dirt_slab",
+		"cosmosdecorations:block_endstone_slab",
+		"cosmosdecorations:block_netherrack_slab"
+	]
+}

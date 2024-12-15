@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"EEE",
+		"EEE"
+	],
+	"key": {
+		"E": {
+			"item": "minecraft:netherrack"
+		}
+	},
+	"result": {
+		"id": "cosmosdecorations:block_netherrack_wall",
+		"count": 6
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"cosmosdecorations:block_dirt_wall",
+		"cosmosdecorations:block_endstone_wall",
+		"cosmosdecorations:block_netherrack_wall",
+		"cosmosdecorations:block_stone_wall"
+	]
+}

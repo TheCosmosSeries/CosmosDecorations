@@ -1,0 +1,13 @@
+{
+	"values": [
+		"cosmosdecorations:block_stone_wall",
+		
+		"cosmosdecorations:block_endstone_stairs",
+		"cosmosdecorations:block_endstone_slab",
+		"cosmosdecorations:block_endstone_wall",
+		
+		"cosmosdecorations:block_netherrack_stairs",
+		"cosmosdecorations:block_netherrack_slab",
+		"cosmosdecorations:block_netherrack_wall"
+	]
+}

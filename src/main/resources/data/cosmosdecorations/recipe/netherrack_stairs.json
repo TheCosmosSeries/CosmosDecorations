@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"E  ",
+		"EE ",
+		"EEE"
+	],
+	"key": {
+		"E": {
+			"item": "minecraft:netherrack"
+		}
+	},
+	"result": {
+		"id": "cosmosdecorations:block_netherrack_stairs",
+		"count": 8
+	}
+}

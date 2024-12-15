@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"cosmosdecorations:block_endstone_stairs",
+		"cosmosdecorations:block_endstone_slab",
+		"cosmosdecorations:block_endstone_wall"
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"GGG",
+		"GDG",
+		"GGG"
+	],
+	"key": {
+		"G": {
+			"item": "cosmosdecorations:block_player_glass_white"
+		},
+		"D":{
+            "item": "minecraft:pink_dye"
+        }
+	},
+	"result": {
+		"id": "cosmosdecorations:block_player_glass_pink",
+		"count": 8
+	}
+}
