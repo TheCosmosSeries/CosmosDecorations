@@ -1,7 +1,7 @@
 package com.tcn.cosmosdecorations;
 
-import com.tcn.cosmosdecorations.core.management.ModRegistrationManager;
-import com.tcn.cosmoslibrary.common.runtime.CosmosConsoleManager;
+import com.tcn.cosmosdecorations.core.management.DecorRegistrationManager;
+import com.tcn.cosmoslibrary.runtime.common.CosmosConsoleManager;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
@@ -18,7 +18,7 @@ public class CosmosDecorations {
 	public static CosmosConsoleManager CONSOLE = new CosmosConsoleManager(CosmosDecorations.MOD_ID, true, true);
 	
 	public CosmosDecorations(IEventBus bus) {
-		ModRegistrationManager.register(bus);
+		DecorRegistrationManager.register(bus);
 		
 		bus.addListener(this::onFMLCommonSetup);
 		bus.addListener(this::onFMLClientSetup);
@@ -32,8 +32,8 @@ public class CosmosDecorations {
 	public void onFMLClientSetup(final FMLClientSetupEvent event) {
 		final ModLoadingContext context = ModLoadingContext.get();
 
-		ModRegistrationManager.registerClient(context);
-		ModRegistrationManager.onFMLClientSetup(event);
+		DecorRegistrationManager.registerClient(context);
+		DecorRegistrationManager.onFMLClientSetup(event);
 		
 		CONSOLE.startup("CosmosDecorations Client Setup complete.");
 	}
