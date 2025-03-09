@@ -15,12 +15,11 @@ public class DecorPlayerCollideGlass extends DecorConnectedGlassColour {
 	
 	public DecorPlayerCollideGlass(Properties propertiesIn, boolean collidePlayersIn, int blockColourIn) {
 		super(propertiesIn, blockColourIn);
-		
 		this.collidePlayers = collidePlayersIn;
 	}
 	
 	@Override
 	public VoxelShape getCollisionShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return (((context instanceof EntityCollisionContext && ((EntityCollisionContext)context).getEntity() instanceof Player)) == this.collidePlayers) ? state.getShape(world, pos) : Shapes.empty();
+		return (((context instanceof EntityCollisionContext col && col.getEntity() instanceof Player)) == this.collidePlayers) ? state.getShape(world, pos) : Shapes.empty();
 	}
 }

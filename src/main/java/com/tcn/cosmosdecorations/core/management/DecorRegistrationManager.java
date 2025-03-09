@@ -42,8 +42,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-@SuppressWarnings({ "deprecation", "unused" })
-@EventBusSubscriber(modid = CosmosDecorations.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = CosmosDecorations.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DecorRegistrationManager {
 
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(CosmosDecorations.MOD_ID);
@@ -52,9 +51,9 @@ public class DecorRegistrationManager {
 	public static final ArrayList<Supplier<? extends ItemLike>> TAB_ITEMS = new ArrayList<>();
 	
 	public static final Supplier<CreativeModeTab> COSMOS_DECORATIONS_GROUP = TABS.register("cosmos_decorations", 
-		() -> CreativeModeTab.builder()
-			.title(ComponentHelper.style(ComponentColour.GREEN, "bold", "Cosmos Decorations")).icon(() -> { return new ItemStack(DecorRegistrationManager.BLOCK_PLAYER_GLASS_WHITE); })
-			.displayItems((params, output) -> TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()))).build()
+		() -> CreativeModeTab.builder().title(ComponentHelper.style(ComponentColour.GREEN, "bold", "Cosmos Decorations")).icon(() -> {
+			return new ItemStack(DecorRegistrationManager.BLOCK_PLAYER_GLASS_WHITE); 
+		}).displayItems((params, output) -> TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()))).build()
 	);
 	
 	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_WHITE = BLOCKS.register("block_player_glass_white", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.WHITE.decOpaque()));
@@ -105,28 +104,28 @@ public class DecorRegistrationManager {
 	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BLACK = BLOCKS.register("block_player_glass_black", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.BLACK.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_BLACK = addToTab(ITEMS.register("block_player_glass_black", () -> new BlockItem(BLOCK_PLAYER_GLASS_BLACK.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_STONE_WALL = BLOCKS.register("block_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.STONE).forceSolidOn().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+	public static final DeferredBlock<Block> BLOCK_STONE_WALL = BLOCKS.register("block_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).forceSolidOn().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
 	public static final DeferredItem<Item> ITEM_STONE_WALL = addToTab(ITEMS.register("block_stone_wall", ()-> new BlockItem(BLOCK_STONE_WALL.get(), new Item.Properties())));
 
 	public static final DeferredBlock<Block> BLOCK_DIRT_STAIRS = BLOCKS.register("block_dirt_stairs", () -> new StairBlock(Blocks.DIRT.defaultBlockState(), Block.Properties.of().mapColor(MapColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL)));
 	public static final DeferredItem<Item> ITEM_DIRT_STAIRS = addToTab(ITEMS.register("block_dirt_stairs", ()-> new BlockItem(BLOCK_DIRT_STAIRS.get(), new Item.Properties())));
 	public static final DeferredBlock<Block> BLOCK_DIRT_SLAB = BLOCKS.register("block_dirt_slab", () -> new SlabBlock(Block.Properties.of().mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.GRAVEL)));
 	public static final DeferredItem<Item> ITEM_DIRT_SLAB = addToTab(ITEMS.register("block_dirt_slab", ()-> new BlockItem(BLOCK_DIRT_SLAB.get(), new Item.Properties())));
-	public static final DeferredBlock<Block> BLOCK_DIRT_WALL = BLOCKS.register("block_dirt_wall", () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.DIRT).forceSolidOn().mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.GRAVEL)));
+	public static final DeferredBlock<Block> BLOCK_DIRT_WALL = BLOCKS.register("block_dirt_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).forceSolidOn().mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.GRAVEL)));
 	public static final DeferredItem<Item> ITEM_DIRT_WALL = addToTab(ITEMS.register("block_dirt_wall", ()-> new BlockItem(BLOCK_DIRT_WALL.get(), new Item.Properties())));
 
 	public static final DeferredBlock<Block> BLOCK_ENDSTONE_STAIRS = BLOCKS.register("block_endstone_stairs", () -> new StairBlock(Blocks.END_STONE.defaultBlockState(), Block.Properties.of().mapColor(MapColor.SAND).requiresCorrectToolForDrops().strength(3.0F, 9.0F)));
 	public static final DeferredItem<Item> ITEM_ENDSTONE_STAIRS = addToTab(ITEMS.register("block_endstone_stairs", ()-> new BlockItem(BLOCK_ENDSTONE_STAIRS.get(), new Item.Properties())));
 	public static final DeferredBlock<Block> BLOCK_ENDSTONE_SLAB = BLOCKS.register("block_endstone_slab", () -> new SlabBlock(Block.Properties.of().mapColor(MapColor.SAND).requiresCorrectToolForDrops().strength(3.0F, 9.0F)));
 	public static final DeferredItem<Item> ITEM_ENDSTONE_SLAB = addToTab(ITEMS.register("block_endstone_slab", ()-> new BlockItem(BLOCK_ENDSTONE_SLAB.get(), new Item.Properties())));
-	public static final DeferredBlock<Block> BLOCK_ENDSTONE_WALL = BLOCKS.register("block_endstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.END_STONE).mapColor(MapColor.SAND).requiresCorrectToolForDrops().strength(3.0F, 9.0F)));
+	public static final DeferredBlock<Block> BLOCK_ENDSTONE_WALL = BLOCKS.register("block_endstone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE).mapColor(MapColor.SAND).requiresCorrectToolForDrops().strength(3.0F, 9.0F)));
 	public static final DeferredItem<Item> ITEM_ENDSTONE_WALL = addToTab(ITEMS.register("block_endstone_wall", ()-> new BlockItem(BLOCK_ENDSTONE_WALL.get(), new Item.Properties())));
 
 	public static final DeferredBlock<Block> BLOCK_NETHERRACK_STAIRS = BLOCKS.register("block_netherrack_stairs", () -> new StairBlock(Blocks.NETHERRACK.defaultBlockState(), Block.Properties.of().mapColor(MapColor.NETHER).requiresCorrectToolForDrops().strength(0.4F).sound(SoundType.NETHERRACK)));
 	public static final DeferredItem<Item> ITEM_NETHERRACK_STAIRS = addToTab(ITEMS.register("block_netherrack_stairs", ()-> new BlockItem(BLOCK_NETHERRACK_STAIRS.get(), new Item.Properties())));
 	public static final DeferredBlock<Block> BLOCK_NETHERRACK_SLAB = BLOCKS.register("block_netherrack_slab", () -> new SlabBlock(Block.Properties.of().mapColor(MapColor.NETHER).requiresCorrectToolForDrops().strength(0.4F).sound(SoundType.NETHERRACK)));
 	public static final DeferredItem<Item> ITEM_NETHERRACK_SLAB = addToTab(ITEMS.register("block_netherrack_slab", ()-> new BlockItem(BLOCK_NETHERRACK_SLAB.get(), new Item.Properties())));
-	public static final DeferredBlock<Block> BLOCK_NETHERRACK_WALL = BLOCKS.register("block_netherrack_wall", () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.NETHERRACK).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().strength(0.4F).sound(SoundType.NETHERRACK)));
+	public static final DeferredBlock<Block> BLOCK_NETHERRACK_WALL = BLOCKS.register("block_netherrack_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK).mapColor(MapColor.NETHER).requiresCorrectToolForDrops().strength(0.4F).sound(SoundType.NETHERRACK)));
 	public static final DeferredItem<Item> ITEM_NETHERRACK_WALL = addToTab(ITEMS.register("block_netherrack_wall", ()-> new BlockItem(BLOCK_NETHERRACK_WALL.get(), new Item.Properties())));
 
 	public static void register(IEventBus bus) {
@@ -184,6 +183,7 @@ public class DecorRegistrationManager {
 	@OnlyIn(Dist.CLIENT)
 	public static void registerClient(ModLoadingContext context) { }
 	
+	@SuppressWarnings("deprecation")
 	@OnlyIn(Dist.CLIENT)
 	public static void onFMLClientSetup(FMLClientSetupEvent event) {
 		CosmosRuntime.Client.setRenderLayers(RenderType.translucent(), 
@@ -208,11 +208,11 @@ public class DecorRegistrationManager {
 	
 	private static BlockBehaviour.Properties glassProperties(boolean lightEmit) {
 		BlockBehaviour.Properties prop = Block.Properties.of()
-				.isValidSpawn(DecorRegistrationManager::neverAllowSpawn)
-				.isRedstoneConductor(DecorRegistrationManager::isntSolid)
-				.isSuffocating(DecorRegistrationManager::isntSolid)
-				.isViewBlocking(DecorRegistrationManager::isntSolid)
-				.noOcclusion().sound(SoundType.GLASS).strength(0.3F);
+			.isValidSpawn(DecorRegistrationManager::neverAllowSpawn)
+			.isRedstoneConductor(DecorRegistrationManager::isntSolid)
+			.isSuffocating(DecorRegistrationManager::isntSolid)
+			.isViewBlocking(DecorRegistrationManager::isntSolid)
+			.noOcclusion().sound(SoundType.GLASS).strength(0.3F);
 		
 		if (lightEmit) {
 			return prop.lightLevel((blockState) -> { return 15; });
@@ -230,11 +230,6 @@ public class DecorRegistrationManager {
 	}
 
     private static <T extends Item> DeferredItem<T> addToTab(DeferredItem<T> itemLike) {
-        TAB_ITEMS.add(itemLike);
-        return itemLike;
-    }
-
-    private static <A extends Block> DeferredBlock<A> addToTabA(DeferredBlock<A> itemLike) {
         TAB_ITEMS.add(itemLike);
         return itemLike;
     }
