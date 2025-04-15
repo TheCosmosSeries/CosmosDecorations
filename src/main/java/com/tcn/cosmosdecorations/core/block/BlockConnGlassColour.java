@@ -5,11 +5,11 @@ import com.tcn.cosmoslibrary.common.block.CosmosBlockConnectedGlass;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class DecorConnectedGlassColour extends CosmosBlockConnectedGlass {
+public class BlockConnGlassColour extends CosmosBlockConnectedGlass {
 
 	private final int blockColour;
 	
-	public DecorConnectedGlassColour(Properties propertiesIn, int blockColourIn) {
+	public BlockConnGlassColour(Properties propertiesIn, int blockColourIn) {
 		super(propertiesIn);
 		
 		this.blockColour = blockColourIn;

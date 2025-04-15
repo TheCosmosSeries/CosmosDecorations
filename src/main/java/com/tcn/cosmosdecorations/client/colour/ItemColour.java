@@ -1,6 +1,7 @@
 package com.tcn.cosmosdecorations.client.colour;
 
-import com.tcn.cosmosdecorations.core.block.DecorConnectedGlassColour;
+import com.tcn.cosmosdecorations.core.block.BlockConnGlassColour;
+import com.tcn.cosmosdecorations.core.block.BlockWallConnGlassColourPlayer;
 
 import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.world.item.BlockItem;
@@ -17,7 +18,11 @@ public class ItemColour implements ItemColor {
 		if (item instanceof BlockItem blockItem) {
 			Block block = blockItem.getBlock();
 			
-			if (block instanceof DecorConnectedGlassColour blockGlass) {
+			if (block instanceof BlockConnGlassColour blockGlass) {
+				return blockGlass.getBlockColour();
+			}
+
+			if (block instanceof BlockWallConnGlassColourPlayer blockGlass) {
 				return blockGlass.getBlockColour();
 			}
 		}

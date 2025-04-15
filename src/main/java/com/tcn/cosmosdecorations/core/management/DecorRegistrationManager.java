@@ -6,7 +6,8 @@ import java.util.function.Supplier;
 import com.tcn.cosmosdecorations.CosmosDecorations;
 import com.tcn.cosmosdecorations.client.colour.BlockColour;
 import com.tcn.cosmosdecorations.client.colour.ItemColour;
-import com.tcn.cosmosdecorations.core.block.DecorPlayerCollideGlass;
+import com.tcn.cosmosdecorations.core.block.BlockConnGlassColourPlayer;
+import com.tcn.cosmosdecorations.core.block.BlockWallConnGlassColourPlayer;
 import com.tcn.cosmoslibrary.common.lib.ComponentColour;
 import com.tcn.cosmoslibrary.common.lib.ComponentHelper;
 import com.tcn.cosmoslibrary.runtime.common.CosmosRuntime;
@@ -35,14 +36,12 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModLoadingContext;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-@EventBusSubscriber(modid = CosmosDecorations.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class DecorRegistrationManager {
 
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(CosmosDecorations.MOD_ID);
@@ -56,53 +55,107 @@ public class DecorRegistrationManager {
 		}).displayItems((params, output) -> TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()))).build()
 	);
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_WHITE = BLOCKS.register("block_player_glass_white", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.WHITE.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_WHITE = BLOCKS.register("block_player_glass_white", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.WHITE.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_WHITE = addToTab(ITEMS.register("block_player_glass_white", () -> new BlockItem(BLOCK_PLAYER_GLASS_WHITE.get(), new Item.Properties())));
 
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_ORANGE = BLOCKS.register("block_player_glass_orange", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.ORANGE.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_ORANGE = BLOCKS.register("block_player_glass_orange", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.ORANGE.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_ORANGE = addToTab(ITEMS.register("block_player_glass_orange", () -> new BlockItem(BLOCK_PLAYER_GLASS_ORANGE.get(), new Item.Properties())));
 
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_MAGENTA = BLOCKS.register("block_player_glass_magenta", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.MAGENTA.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_MAGENTA = BLOCKS.register("block_player_glass_magenta", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.MAGENTA.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_MAGENTA = addToTab(ITEMS.register("block_player_glass_magenta", () -> new BlockItem(BLOCK_PLAYER_GLASS_MAGENTA.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_LIGHT_BLUE = BLOCKS.register("block_player_glass_light_blue", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.LIGHT_BLUE.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_LIGHT_BLUE = BLOCKS.register("block_player_glass_light_blue", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.LIGHT_BLUE.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_LIGHT_BLUE = addToTab(ITEMS.register("block_player_glass_light_blue", () -> new BlockItem(BLOCK_PLAYER_GLASS_LIGHT_BLUE.get(), new Item.Properties())));
 
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_YELLOW = BLOCKS.register("block_player_glass_yellow", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.YELLOW.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_YELLOW = BLOCKS.register("block_player_glass_yellow", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.YELLOW.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_YELLOW = addToTab(ITEMS.register("block_player_glass_yellow", () -> new BlockItem(BLOCK_PLAYER_GLASS_YELLOW.get(), new Item.Properties())));
 
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_LIME = BLOCKS.register("block_player_glass_lime", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.LIME.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_LIME = BLOCKS.register("block_player_glass_lime", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.LIME.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_LIME = addToTab(ITEMS.register("block_player_glass_lime", () -> new BlockItem(BLOCK_PLAYER_GLASS_LIME.get(), new Item.Properties())));
 
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_PINK = BLOCKS.register("block_player_glass_pink", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.PINK.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_PINK = BLOCKS.register("block_player_glass_pink", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.PINK.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_PINK = addToTab(ITEMS.register("block_player_glass_pink", () -> new BlockItem(BLOCK_PLAYER_GLASS_PINK.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_GRAY = BLOCKS.register("block_player_glass_gray", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.GRAY.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_GRAY = BLOCKS.register("block_player_glass_gray", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.GRAY.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_GRAY = addToTab(ITEMS.register("block_player_glass_gray", () -> new BlockItem(BLOCK_PLAYER_GLASS_GRAY.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_LIGHT_GRAY = BLOCKS.register("block_player_glass_light_gray", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.LIGHT_GRAY.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_LIGHT_GRAY = BLOCKS.register("block_player_glass_light_gray", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.LIGHT_GRAY.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_LIGHT_GRAY = addToTab(ITEMS.register("block_player_glass_light_gray", () -> new BlockItem(BLOCK_PLAYER_GLASS_LIGHT_GRAY.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_CYAN = BLOCKS.register("block_player_glass_cyan", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.CYAN.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_CYAN = BLOCKS.register("block_player_glass_cyan", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.CYAN.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_CYAN = addToTab(ITEMS.register("block_player_glass_cyan", () -> new BlockItem(BLOCK_PLAYER_GLASS_CYAN.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_PURPLE = BLOCKS.register("block_player_glass_purple", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.PURPLE.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_PURPLE = BLOCKS.register("block_player_glass_purple", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.PURPLE.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_PURPLE = addToTab(ITEMS.register("block_player_glass_purple", () -> new BlockItem(BLOCK_PLAYER_GLASS_PURPLE.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BLUE = BLOCKS.register("block_player_glass_blue", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.BLUE.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BLUE = BLOCKS.register("block_player_glass_blue", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.BLUE.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_BLUE = addToTab(ITEMS.register("block_player_glass_blue", () -> new BlockItem(BLOCK_PLAYER_GLASS_BLUE.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BROWN = BLOCKS.register("block_player_glass_brown", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.BROWN.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BROWN = BLOCKS.register("block_player_glass_brown", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.BROWN.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_BROWN = addToTab(ITEMS.register("block_player_glass_brown", () -> new BlockItem(BLOCK_PLAYER_GLASS_BROWN.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_GREEN = BLOCKS.register("block_player_glass_green", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.GREEN.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_GREEN = BLOCKS.register("block_player_glass_green", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.GREEN.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_GREEN = addToTab(ITEMS.register("block_player_glass_green", () -> new BlockItem(BLOCK_PLAYER_GLASS_GREEN.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_RED = BLOCKS.register("block_player_glass_red", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.RED.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_RED = BLOCKS.register("block_player_glass_red", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.RED.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_RED = addToTab(ITEMS.register("block_player_glass_red", () -> new BlockItem(BLOCK_PLAYER_GLASS_RED.get(), new Item.Properties())));
 	
-	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BLACK = BLOCKS.register("block_player_glass_black", () -> new DecorPlayerCollideGlass(glassProperties(true), false, ComponentColour.BLACK.decOpaque()));
+	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_BLACK = BLOCKS.register("block_player_glass_black", () -> new BlockConnGlassColourPlayer(glassProperties(true), false, ComponentColour.BLACK.decOpaque()));
 	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_BLACK = addToTab(ITEMS.register("block_player_glass_black", () -> new BlockItem(BLOCK_PLAYER_GLASS_BLACK.get(), new Item.Properties())));
+
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_WHITE = BLOCKS.register("block_wall_player_glass_white", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.WHITE.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_WHITE = addToTab(ITEMS.register("block_wall_player_glass_white", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_WHITE.get(), new Item.Properties())));
+
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_ORANGE = BLOCKS.register("block_wall_player_glass_orange", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.ORANGE.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_ORANGE = addToTab(ITEMS.register("block_wall_player_glass_orange", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_ORANGE.get(), new Item.Properties())));
+
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_MAGENTA = BLOCKS.register("block_wall_player_glass_magenta", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.MAGENTA.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_MAGENTA = addToTab(ITEMS.register("block_wall_player_glass_magenta", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_MAGENTA.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_LIGHT_BLUE = BLOCKS.register("block_wall_player_glass_light_blue", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.LIGHT_BLUE.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_LIGHT_BLUE = addToTab(ITEMS.register("block_wall_player_glass_light_blue", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_LIGHT_BLUE.get(), new Item.Properties())));
+
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_YELLOW = BLOCKS.register("block_wall_player_glass_yellow", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.YELLOW.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_YELLOW = addToTab(ITEMS.register("block_wall_player_glass_yellow", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_YELLOW.get(), new Item.Properties())));
+
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_LIME = BLOCKS.register("block_wall_player_glass_lime", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.LIME.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_LIME = addToTab(ITEMS.register("block_wall_player_glass_lime", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_LIME.get(), new Item.Properties())));
+
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_PINK = BLOCKS.register("block_wall_player_glass_pink", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.PINK.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_PINK = addToTab(ITEMS.register("block_wall_player_glass_pink", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_PINK.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_GRAY = BLOCKS.register("block_wall_player_glass_gray", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.GRAY.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_GRAY = addToTab(ITEMS.register("block_wall_player_glass_gray", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_GRAY.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_LIGHT_GRAY = BLOCKS.register("block_wall_player_glass_light_gray", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.LIGHT_GRAY.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_LIGHT_GRAY = addToTab(ITEMS.register("block_wall_player_glass_light_gray", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_LIGHT_GRAY.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_CYAN = BLOCKS.register("block_wall_player_glass_cyan", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.CYAN.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_CYAN = addToTab(ITEMS.register("block_wall_player_glass_cyan", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_CYAN.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_PURPLE = BLOCKS.register("block_wall_player_glass_purple", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.PURPLE.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_PURPLE = addToTab(ITEMS.register("block_wall_player_glass_purple", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_PURPLE.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_BLUE = BLOCKS.register("block_wall_player_glass_blue", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.BLUE.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_BLUE = addToTab(ITEMS.register("block_wall_player_glass_blue", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_BLUE.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_BROWN = BLOCKS.register("block_wall_player_glass_brown", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.BROWN.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_BROWN = addToTab(ITEMS.register("block_wall_player_glass_brown", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_BROWN.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_GREEN = BLOCKS.register("block_wall_player_glass_green", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.GREEN.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_GREEN = addToTab(ITEMS.register("block_wall_player_glass_green", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_GREEN.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_RED = BLOCKS.register("block_wall_player_glass_red", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.RED.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_RED = addToTab(ITEMS.register("block_wall_player_glass_red", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_RED.get(), new Item.Properties())));
+	
+	public static final DeferredBlock<Block> BLOCK_WALL_PLAYER_GLASS_BLACK = BLOCKS.register("block_wall_player_glass_black", () -> new BlockWallConnGlassColourPlayer(glassProperties(true), false, ComponentColour.BLACK.decOpaque()));
+	public static final DeferredItem<Item> ITEM_WALL_PLAYER_GLASS_BLACK = addToTab(ITEMS.register("block_wall_player_glass_black", () -> new BlockItem(BLOCK_WALL_PLAYER_GLASS_BLACK.get(), new Item.Properties())));
+
+
+//	public static final DeferredBlock<Block> BLOCK_PLAYER_GLASS_WITHER = BLOCKS.register("block_player_glass_wither", () -> new BlockConnGlassColourPlayerWither(glassProperties(true), false, ComponentColour.BLACK.decOpaque()));
+//	public static final DeferredItem<Item> ITEM_PLAYER_GLASS_WITHER = addToTab(ITEMS.register("block_player_glass_wither", () -> new BlockItem(BLOCK_PLAYER_GLASS_WITHER.get(), new Item.Properties())));
+
 	
 	public static final DeferredBlock<Block> BLOCK_STONE_WALL = BLOCKS.register("block_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).forceSolidOn().mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
 	public static final DeferredItem<Item> ITEM_STONE_WALL = addToTab(ITEMS.register("block_stone_wall", ()-> new BlockItem(BLOCK_STONE_WALL.get(), new Item.Properties())));
@@ -153,7 +206,24 @@ public class DecorRegistrationManager {
 			BLOCK_PLAYER_GLASS_BROWN.get(),
 			BLOCK_PLAYER_GLASS_GREEN.get(),
 			BLOCK_PLAYER_GLASS_RED.get(),
-			BLOCK_PLAYER_GLASS_BLACK.get()
+			BLOCK_PLAYER_GLASS_BLACK.get(),
+			
+			BLOCK_WALL_PLAYER_GLASS_WHITE.get(),
+			BLOCK_WALL_PLAYER_GLASS_ORANGE.get(),
+			BLOCK_WALL_PLAYER_GLASS_MAGENTA.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIGHT_BLUE.get(),
+			BLOCK_WALL_PLAYER_GLASS_YELLOW.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIME.get(),
+			BLOCK_WALL_PLAYER_GLASS_PINK.get(),
+			BLOCK_WALL_PLAYER_GLASS_GRAY.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIGHT_GRAY.get(),
+			BLOCK_WALL_PLAYER_GLASS_CYAN.get(),
+			BLOCK_WALL_PLAYER_GLASS_PURPLE.get(),
+			BLOCK_WALL_PLAYER_GLASS_BLUE.get(),
+			BLOCK_WALL_PLAYER_GLASS_BROWN.get(),
+			BLOCK_WALL_PLAYER_GLASS_GREEN.get(),
+			BLOCK_WALL_PLAYER_GLASS_RED.get(),
+			BLOCK_WALL_PLAYER_GLASS_BLACK.get()
 		);
 	}
 
@@ -176,7 +246,24 @@ public class DecorRegistrationManager {
 			BLOCK_PLAYER_GLASS_BROWN.get(),
 			BLOCK_PLAYER_GLASS_GREEN.get(),
 			BLOCK_PLAYER_GLASS_RED.get(),
-			BLOCK_PLAYER_GLASS_BLACK.get()
+			BLOCK_PLAYER_GLASS_BLACK.get(),
+
+			BLOCK_WALL_PLAYER_GLASS_WHITE.get(),
+			BLOCK_WALL_PLAYER_GLASS_ORANGE.get(),
+			BLOCK_WALL_PLAYER_GLASS_MAGENTA.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIGHT_BLUE.get(),
+			BLOCK_WALL_PLAYER_GLASS_YELLOW.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIME.get(),
+			BLOCK_WALL_PLAYER_GLASS_PINK.get(),
+			BLOCK_WALL_PLAYER_GLASS_GRAY.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIGHT_GRAY.get(),
+			BLOCK_WALL_PLAYER_GLASS_CYAN.get(),
+			BLOCK_WALL_PLAYER_GLASS_PURPLE.get(),
+			BLOCK_WALL_PLAYER_GLASS_BLUE.get(),
+			BLOCK_WALL_PLAYER_GLASS_BROWN.get(),
+			BLOCK_WALL_PLAYER_GLASS_GREEN.get(),
+			BLOCK_WALL_PLAYER_GLASS_RED.get(),
+			BLOCK_WALL_PLAYER_GLASS_BLACK.get()
 		);
 	}
 	
@@ -202,7 +289,24 @@ public class DecorRegistrationManager {
 			BLOCK_PLAYER_GLASS_BROWN.get(),
 			BLOCK_PLAYER_GLASS_GREEN.get(),
 			BLOCK_PLAYER_GLASS_RED.get(),
-			BLOCK_PLAYER_GLASS_BLACK.get()
+			BLOCK_PLAYER_GLASS_BLACK.get(),
+			
+			BLOCK_WALL_PLAYER_GLASS_WHITE.get(),
+			BLOCK_WALL_PLAYER_GLASS_ORANGE.get(),
+			BLOCK_WALL_PLAYER_GLASS_MAGENTA.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIGHT_BLUE.get(),
+			BLOCK_WALL_PLAYER_GLASS_YELLOW.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIME.get(),
+			BLOCK_WALL_PLAYER_GLASS_PINK.get(),
+			BLOCK_WALL_PLAYER_GLASS_GRAY.get(),
+			BLOCK_WALL_PLAYER_GLASS_LIGHT_GRAY.get(),
+			BLOCK_WALL_PLAYER_GLASS_CYAN.get(),
+			BLOCK_WALL_PLAYER_GLASS_PURPLE.get(),
+			BLOCK_WALL_PLAYER_GLASS_BLUE.get(),
+			BLOCK_WALL_PLAYER_GLASS_BROWN.get(),
+			BLOCK_WALL_PLAYER_GLASS_GREEN.get(),
+			BLOCK_WALL_PLAYER_GLASS_RED.get(),
+			BLOCK_WALL_PLAYER_GLASS_BLACK.get()
 		);
 	}
 	

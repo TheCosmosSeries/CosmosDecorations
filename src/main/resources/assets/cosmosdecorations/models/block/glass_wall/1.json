@@ -1,0 +1,20 @@
+{
+    "textures": {
+        "particle": "cosmosdecorations:block/glass/player_connected/wall/particle",
+        "portal": "cosmosdecorations:block/glass/player_connected/wall/u",
+        "side_v": "cosmosdecorations:block/glass/player_connected/wall/side_vu",
+        "side_h": "cosmosdecorations:block/glass/player_connected/wall/side_h"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 4 ],
+            "to": [ 16, 16, 12 ],
+            "faces": {
+                "down": { "uv": [ 0, 4, 16, 12 ], "texture": "#side_h", "tintindex": 0 },
+                "east": { "uv": [ 4, 0, 12, 16 ], "texture": "#side_v", "tintindex": 0 },
+                "west": { "uv": [ 4, 0, 12, 16 ], "texture": "#side_v", "tintindex": 0 },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#portal", "tintindex": 0 },
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#portal", "tintindex": 0 }
+            }
+        }
+    ]
+}

@@ -18,6 +18,23 @@
 	"block.cosmosdecorations.block_player_glass_red": "Red Player Glass",
 	"block.cosmosdecorations.block_player_glass_black": "Black Player Glass",
 	
+	"block.cosmosdecorations.block_wall_player_glass_white": "White Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_orange": "Orange Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_magenta": "Magenta Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_light_blue": "Light Blue Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_yellow": "Yellow Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_lime": "Lime Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_pink": "Pink Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_gray": "Grey Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_light_gray": "Light Grey Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_cyan": "Cyan Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_purple": "Purple Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_blue": "Blue Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_brown": "Brown Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_green": "Green Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_red": "Red Player Glass Wall",
+	"block.cosmosdecorations.block_wall_player_glass_black": "Black Player Glass Wall",
+	
 	"block.cosmosdecorations.block_stone_wall": "Stone Wall",
 	
 	"block.cosmosdecorations.block_netherrack_stairs": "Netherrack Stairs",

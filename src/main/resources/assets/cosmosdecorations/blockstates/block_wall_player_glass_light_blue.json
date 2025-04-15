@@ -1,0 +1,52 @@
+{
+	"multipart": [
+		{ "when": { "AND": [ { "axis": "x", "down": "false", "up": "false", "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/0" 	 	  } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false", "up": "false", "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/0",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false", "up": "true",  "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/1" 	 	  } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false", "up": "true",  "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/1",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "false", "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/2" 	 	  } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "false", "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/2",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "true",  "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/3" 		  } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "true",  "left": "false", "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/3",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false", "up": "true",  "left": "true",  "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/4" 	      } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false", "up": "true",  "left": "true",  "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/4",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false", "up": "true",  "left": "false", "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/5" 	      } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false", "up": "true",  "left": "false", "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/5",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false", "up": "true",  "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/6" 	      } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false", "up": "true",  "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/6",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "false", "left": "true",  "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/7" 	      } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "false", "left": "true",  "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/7",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "false", "left": "false", "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/8"           } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "false", "left": "false", "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/8",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "false", "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/9"           } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "false", "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/9",  "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "true",  "left": "true",  "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/10"          } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "true",  "left": "true",  "right": "false" } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/10", "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "true",  "left": "false", "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/11"          } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "true",  "left": "false", "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/11", "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "true",  "up": "true",  "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/12"          } },
+		{ "when": { "AND": [ { "axis": "z", "down": "true",  "up": "true",  "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/12", "y": 90 } },
+		
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false",  "up": "false",  "left": "true",  "right": "false"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/13"          } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false",  "up": "false",  "left": "true",  "right": "false"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/13", "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false",  "up": "false",  "left": "false",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/14"          } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false",  "up": "false",  "left": "false",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/14", "y": 90 } },
+		
+		{ "when": { "AND": [ { "axis": "x", "down": "false",  "up": "false",  "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/15"          } },
+		{ "when": { "AND": [ { "axis": "z", "down": "false",  "up": "false",  "left": "true",  "right": "true"  } ] }, "apply": { "model": "cosmosdecorations:block/glass_wall/15", "y": 90 } }
+	]
+}

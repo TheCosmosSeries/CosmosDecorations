@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"GGG",
+		"GGG"
+	],
+	"key": {
+		"G": {
+			"item": "cosmosdecorations:block_player_glass_green"
+		}
+	},
+	"result": {
+		"id": "cosmosdecorations:block_wall_player_glass_green",
+		"count": 6
+	}
+}

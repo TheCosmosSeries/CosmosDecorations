@@ -4,6 +4,23 @@
 		"cosmosdecorations:block_dirt_wall",
 		"cosmosdecorations:block_endstone_wall",
 		"cosmosdecorations:block_netherrack_wall",
-		"cosmosdecorations:block_stone_wall"
+		"cosmosdecorations:block_stone_wall",
+		
+		"cosmosdecorations:block_wall_player_glass_white",
+		"cosmosdecorations:block_wall_player_glass_orange",
+		"cosmosdecorations:block_wall_player_glass_magenta",
+		"cosmosdecorations:block_wall_player_glass_light_blue",
+		"cosmosdecorations:block_wall_player_glass_yellow",
+		"cosmosdecorations:block_wall_player_glass_lime",
+		"cosmosdecorations:block_wall_player_glass_pink",
+		"cosmosdecorations:block_wall_player_glass_gray",
+		"cosmosdecorations:block_wall_player_glass_light_gray",
+		"cosmosdecorations:block_wall_player_glass_cyan",
+		"cosmosdecorations:block_wall_player_glass_purple",
+		"cosmosdecorations:block_wall_player_glass_blue",
+		"cosmosdecorations:block_wall_player_glass_brown",
+		"cosmosdecorations:block_wall_player_glass_green",
+		"cosmosdecorations:block_wall_player_glass_red",
+		"cosmosdecorations:block_wall_player_glass_black"
 	]
 }
